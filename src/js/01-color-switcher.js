@@ -4,6 +4,7 @@ let timerId = null;
 let currentColor = null;
 
 startBtn.addEventListener('click', () => {
+  startBtn.disabled = true;
   timerId = setInterval(() => {
     currentColor = getRandomHexColor();
     document.body.style.backgroundColor = currentColor;
@@ -12,7 +13,7 @@ startBtn.addEventListener('click', () => {
 
 stopBtn.addEventListener('click', () => {
   clearInterval(timerId);
-  //   timerId = null;
+  startBtn.disabled = false;
 });
 
 function getRandomHexColor() {
