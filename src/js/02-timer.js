@@ -10,7 +10,7 @@ import 'izitoast/dist/css/iziToast.min.css';
 iziToast.info({
   title: 'Hello my Friend!💜💜💜',
   message: 'Please, choose a date and click on start 🔺',
-  position: 'center',
+  position: 'topCenter',
 });
 
 const res = {
@@ -68,7 +68,7 @@ const dateTimePicker = flatpickr('#datetime-picker', {
       activeBtn.setAttribute('disabled', 'disabled');
       iziToast.error({
         title: '✖️ Error',
-        message: '✖️Please choose a date in the future',
+        message: 'Please choose a date in the future',
         position: 'topRight',
       });
     }
