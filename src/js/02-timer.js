@@ -9,7 +9,7 @@ import 'izitoast/dist/css/iziToast.min.css';
 
 iziToast.info({
   title: 'Hello my Friend!💜💜💜',
-  message: 'Please, choose a date and click on start 🔺',
+  message: 'Please, choose a date and click on start 🔻',
   position: 'topCenter',
 });
 
