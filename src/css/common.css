@@ -5,6 +5,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #fafafa;
+
   color: #212121;
   line-height: 1.5;
   padding-top: 10px;
@@ -102,6 +103,11 @@ li {
   background-color: rgb(0, 249, 211);
   color: #ff9604;
 }
+.btn:disabled {
+  background-color: #cccccc;
+  cursor: default;
+  opacity: 0.5;
+}
 
 .timer {
   display: flex;
@@ -145,7 +151,12 @@ input:hover {
   box-shadow: 2px 2px 15px #8707ff inset;
   border: 2px solid #001eff;
 }
-
+input:disabled {
+  background-color: #e0e0e0;
+  border: 1px solid #ccc;
+  cursor: default;
+  opacity: 0.7;
+}
 button {
   position: relative;
   padding: 15px 40px;
@@ -170,8 +181,13 @@ button:hover {
   color: #ff9604;
   /* transition-delay: 0.6s; */
 }
+.button:disabled {
+  background-color: #cccccc;
+  cursor: default;
+  opacity: 0.5;
+}
 
-button span {
+.button span {
   position: absolute;
 }
 

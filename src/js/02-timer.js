@@ -30,6 +30,10 @@ function updateCountdownElements(res, remainingTime) {
 const activeBtn = document.querySelector('[data-start]');
 activeBtn.setAttribute('disabled', 'disabled');
 
+const myInput = document.querySelector('.myInput');
+// Btn.setAttribute('disabled', 'disabled');
+// myInput.removeAttribute('disabled');
+
 function addLeadingZero(value) {
   return String(value).padStart(2, '0');
 }
@@ -56,7 +60,7 @@ const dateTimePicker = flatpickr('#datetime-picker', {
   time_24hr: true,
   defaultDate: new Date(),
   minuteIncrement: 1,
-  onChange([selectedDate]) {
+  onClose([selectedDate]) {
     if (selectedDate >= Date.now()) {
       activeBtn.removeAttribute('disabled');
       iziToast.success({
@@ -76,6 +80,8 @@ const dateTimePicker = flatpickr('#datetime-picker', {
 });
 
 activeBtn.addEventListener('click', () => {
+  activeBtn.setAttribute('disabled', 'disabled');
+  myInput.setAttribute('disabled', 'disabled');
   const selectedDate = dateTimePicker.selectedDates[0];
 
   const currentDate = Date.now();
@@ -85,6 +91,7 @@ activeBtn.addEventListener('click', () => {
   const timerInterval = setInterval(() => {
     if (Date.now() >= selectedDate) {
       clearInterval(timerInterval);
+      myInput.removeAttribute('disabled');
       return;
     }
 

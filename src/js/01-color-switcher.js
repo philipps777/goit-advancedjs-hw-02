@@ -3,8 +3,11 @@ const stopBtn = document.querySelector('.js-stop');
 let timerId = null;
 let currentColor = null;
 
+stopBtn.setAttribute('disabled', 'disabled');
+
 startBtn.addEventListener('click', () => {
-  startBtn.disabled = true;
+  startBtn.setAttribute('disabled', 'disabled');
+  stopBtn.removeAttribute('disabled');
   timerId = setInterval(() => {
     currentColor = getRandomHexColor();
     document.body.style.backgroundColor = currentColor;
@@ -12,8 +15,9 @@ startBtn.addEventListener('click', () => {
 });
 
 stopBtn.addEventListener('click', () => {
+  stopBtn.setAttribute('disabled', 'disabled');
+  startBtn.removeAttribute('disabled');
   clearInterval(timerId);
-  startBtn.disabled = false;
 });
 
 function getRandomHexColor() {
