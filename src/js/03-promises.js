@@ -54,4 +54,11 @@ form.addEventListener('submit', e => {
     currentDelay += step;
   }
   form.reset();
+  setTimeout(() => {
+    iziToast.info({
+      title: 'Choice new Promise',
+      // message: 'Please, choose a date and click on start 🔻',
+      position: 'topCenter',
+    });
+  }, currentDelay);
 });
