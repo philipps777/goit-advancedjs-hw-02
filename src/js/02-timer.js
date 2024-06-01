@@ -92,7 +92,6 @@ activeBtn.addEventListener('click', () => {
       myInput.removeAttribute('disabled');
       iziToast.info({
         title: 'Please, choose a date and click on start 🔻',
-        // message: 'Please, choose a date and click on start 🔻',
         position: 'topCenter',
       });
       return;

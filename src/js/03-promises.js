@@ -57,7 +57,6 @@ form.addEventListener('submit', e => {
   setTimeout(() => {
     iziToast.info({
       title: 'Choice new Promise',
-      // message: 'Please, choose a date and click on start 🔻',
       position: 'topCenter',
     });
   }, currentDelay);
