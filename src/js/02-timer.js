@@ -31,8 +31,6 @@ const activeBtn = document.querySelector('[data-start]');
 activeBtn.setAttribute('disabled', 'disabled');
 
 const myInput = document.querySelector('.myInput');
-// Btn.setAttribute('disabled', 'disabled');
-// myInput.removeAttribute('disabled');
 
 function addLeadingZero(value) {
   return String(value).padStart(2, '0');
